@@ -1,11 +1,19 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Nav from "./Nav";
+import Shop from "./Shop";
+import About from "./About";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <About />
+        <Shop />
+      </div>
+    </Router>
   );
 }
 
