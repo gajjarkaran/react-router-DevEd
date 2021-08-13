@@ -12,7 +12,6 @@ function Shop() {
 	const fetchItems = async () => {
 		const data = await fetch(
 			"https://fortnite-api.theapinetwork.com/upcoming/get"
-    // https://fortnite-api.theapinetwork.com/item/get?id=
 		);
 
 		const items = await data.json();
@@ -24,8 +23,8 @@ function Shop() {
 		<div>
 			{items.map((item) => (
 				<h1 key={item.itemId}>
-          <Link to = {`/shop/${item.itemId}`}>{item.item.name}</Link>
-          </h1>
+					<Link to={`/shop/${item.itemId}`}>{item.item.name}</Link>
+				</h1>
 			))}
 		</div>
 	);
